@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #f5f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+.header {
+    width: 100%;
+    background-color: #1e7f43;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    max-width:1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu ul li {
+    margin-left: 25px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.menu ul li a:hover {
+    color: #d4ffea;
+}
+.home {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url("/static/sugarcane.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.home h1 {
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.home p {
+    color: #f1f1f1;
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #1e7f43, #27ae60);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 50px 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+.section h2 {
+    font-size: 30px;
+    color: #1e7f43;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section p {
+    font-size: 16px;
+    text-align: center;
+}
+.section ul {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+}
+.section ul li {
+    font-size: 16px;
+    padding: 10px;
+    background: #e9f7ef;
+    margin-bottom: 10px;
+    border-left: 5px solid #1e7f43;
+    border-radius: 10px;
+}
+.section ol {
+    max-width: 600px;
+    margin: auto;
+}
+.section ol li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #1e7f43;
+    border-radius: 12px;
+    width: 260px;
+    background: #f9fffb;
+    cursor: pointer;
+}
+
+.section strong {
+    color: #1e7f43;
+}
+#preview {
+    display: none;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    object-fit: cover;
+    border: 3px solid #1e7f43;
+    transition: transform 0.3s ease;
+}
+#preview:hover {
+    transform: scale(1.03);
+}
+.result-box {
+    background: #e9f7ef;
+    border-left: 6px solid #1e7f43;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.result-box span {
+    color: #0b5e2b;
+    font-weight: bold;
+}
+.footer {
+    background: #1e7f43;
+    color: #ffffff;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-container {
+    width: 100%;
+    margin: auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.footer h3,
+.footer h4 {
+    margin-bottom: 15px;
+}
+.footer p,
+.footer a {
+    font-size: 14px;
+    color: #eafff1;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+.footer-links ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-links ul li a:hover {
+    color: #caffdd;
+}
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #caffdd;
+}
+.footer-bottom {
+    background: #166437;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}

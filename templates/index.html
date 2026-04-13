@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Sugarcane Disease Detection System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div class="header">
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'logo.png' %}" alt="Logo">
+            <span>Smart Sugarcane AI</span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Technology</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#upload">Detect</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="home" id="home">
+    <h1>Smart Sugarcane Disease Detection System</h1>
+    <p>
+        AI-powered system to detect sugarcane leaf diseases
+        and suggest solutions for healthier crops.
+    </p>
+    <a href="#upload" class="btn">Get Started</a>
+</div>
+
+<div class="section" id="about">
+    <h2>About Project</h2>
+    <p>
+        This project uses Artificial Intelligence and Deep Learning
+        techniques to detect diseases in sugarcane leaves.
+        It helps farmers identify issues early and reduce crop loss.
+    </p>
+</div>
+
+<div class="section" id="features">
+    <h2>Key Features</h2>
+    <ul>
+        <li>Upload sugarcane leaf image</li>
+        <li>CNN-based disease detection</li>
+        <li>Fast & accurate prediction</li>
+        <li>Suggested solutions for treatment</li>
+    </ul>
+</div>
+
+<div class="section" id="tech">
+    <h2>Technologies Used</h2>
+    <p>
+        <strong>Frontend:</strong> HTML, CSS, JavaScript <br>
+        <strong>Backend Framework:</strong> Django (Python) <br>
+        <strong>Deep Learning:</strong> Convolutional Neural Network (CNN) <br>
+        <strong>Libraries:</strong> TensorFlow, Keras, NumPy, OpenCV, Matplotlib <br>
+        <strong>API Communication:</strong> JSON, Fetch API <br>
+        <strong>Database:</strong> SQLite
+    </p>
+</div>
+
+<div class="section" id="how">
+    <h2>How It Works</h2>
+    <ol>
+        <li>User uploads sugarcane leaf image</li>
+        <li>Image preprocessing</li>
+        <li>CNN model analyzes the image</li>
+        <li>Disease is detected</li>
+        <li>Solution is displayed</li>
+    </ol>
+</div>
+
+<div class="section" id="upload">
+    <h2>Upload Leaf Image</h2>
+    <form id="uploadForm" method="post" enctype="multipart/form-data" action="{% url 'predict_disease' %}">
+        {% csrf_token %}
+        <p>Select sugarcane leaf image JPG</p>
+        <input type="file"  id="leaf_image" name="leaf_image" accept="image/*" required>
+        <img id="preview" alt="Leaf Preview">
+        <br/><br/>
+        <button type="submit" class="btn">Detect Disease</button>
+    </form>
+</div>
+
+<div class="section" id="result-section">
+    <h2>Detection Result</h2>
+    <div class="result-box">
+    <p><strong>Disease:</strong> <span id="disease">{% if disease %}{{ disease }}{% else %}Not Detected{% endif %}</span></p>
+    <p><strong>Confidence:</strong> <span id="confidence">{% if confidence %}{{ confidence|floatformat:2 }}%{% else %}---{% endif %}</span></p>
+    <p><strong>Solutions:</strong> <span id="solution">{% if solution %}{{ solution }}{% else %}---{% endif %}</span></p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Future Scope</h2>
+    <p>
+        Mobile application integration, real-time camera detection,
+        multiple crop support and multilingual assistance.
+    </p>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Smart Sugarcane AI</h3>
+            <p>Smart solutions for sugarcane disease detection and crop management.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Technology</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@sugaraicrop.com</p>
+            <p>Phone: +91 8077763890</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>2026 Smart Sugarcane AI. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="{% static 'script.js' %}"></script> 
+</body>
+</html>
