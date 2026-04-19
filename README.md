@@ -14,7 +14,7 @@ Features:- <br>
 Tech Stack:-
 - Programming Language: Python  
 - Framework: Django  
-- Machine Learning: TensorFlow / Keras 
-- Libraries: OpenCV, NumPy, Pandas, Matplotlib  
+- Deep Learning: Convolutional Neural Networks (CNN)
+- Libraries: OpenCV, NumPy, TensorFlow / Keras, Matplotlib  
 - Frontend: HTML, CSS, JavaScript  
 
