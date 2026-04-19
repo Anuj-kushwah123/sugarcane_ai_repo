@@ -2,7 +2,7 @@
 <p>This project is a Machine Learning based Sugarcane Disease Detection System. 
 It uses CNN models to identify diseases from leaf images and helps farmers 
 take early action.</p>
-<p> Features
+<p> Features <br>
 - Detect sugarcane leaf diseases using images <br> 
 - Built using CNN (Convolutional Neural Network)<br>  
 - Accurate and fast prediction system <br> 
