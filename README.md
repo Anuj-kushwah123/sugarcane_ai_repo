@@ -9,4 +9,12 @@ Features:- <br>
 - Built using CNN (Convolutional Neural Network)<br>  
 - Accurate and fast prediction system <br> 
 - User-friendly interface (Django based web app) <br>
-- Image upload and instant result display 
+- Image upload and instant result display
+
+Tech Stack:-
+- Programming Language: Python  
+- Framework: Django  
+- Machine Learning: TensorFlow / Keras 
+- Libraries: OpenCV, NumPy, Pandas, Matplotlib  
+- Frontend: HTML, CSS, JavaScript  
+
