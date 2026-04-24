@@ -18,3 +18,5 @@ Tech Stack:-
 - Libraries: OpenCV, NumPy, TensorFlow / Keras, Matplotlib  
 - Frontend: HTML, CSS, JavaScript  
 
+
+<img src="" alt="Sample Image" width="100" height="100">
